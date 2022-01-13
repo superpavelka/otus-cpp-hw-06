@@ -98,10 +98,10 @@ void CommandHandler::process()
 
 void CommandHandler::openLog()
 {
-    auto time = std::time(nullptr);
+    auto t = time(nullptr);
     std::ostringstream oss;
     std::ostream& os = oss;
-    os << "bulk" << time << ".log";
+    os << "bulk" << t << ".log";
     _logName = oss.str();
 }
 
